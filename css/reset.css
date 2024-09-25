@@ -1,0 +1,196 @@
+@charset "UTF-8";
+/* =====================
+  全共通
+===================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  border-style: solid;
+  min-inline-size: 0;
+  border-width: 0;
+}
+
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+@supports (text-size-adjust: 100%) {
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+}
+body {
+  height: 100%;
+  margin: unset;
+}
+:where(body) {
+  min-block-size: 100svb;
+}
+
+p,
+table,
+blockquote,
+address,
+pre,
+iframe,
+form,
+figure,
+dl {
+  margin: unset;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: unset;
+  font-weight: inherit;
+  margin: unset;
+}
+
+ol,
+ul {
+  margin: unset;
+  padding: unset;
+  list-style: none;
+}
+
+dt {
+  font-weight: bold;
+}
+dd {
+  margin-left: unset;
+}
+
+/* =====================
+  画像
+===================== */
+img,
+svg {
+  max-width: 100%;
+  vertical-align: bottom;
+  height: auto;
+  max-inline-size: 100%;
+  max-block-size: 100%;
+}
+img[width='0'] {
+  display: none;
+}
+
+/* =====================
+  フォームパーツ
+===================== */
+a,
+button {
+  cursor: pointer;
+  touch-action: manipulation;
+  text-decoration: none;
+  color: inherit;
+  border-radius: unset;
+  background-color: unset;
+  -webkit-tap-highlight-color: color-mix(in srgb, black 10%, transparent 100%);
+}
+
+:where(button, input, select, textarea),
+::file-selector-button {
+  -webkit-user-select: auto;
+  user-select: auto;
+  padding: unset;
+  border-radius: unset;
+  font-family: inherit;
+  margin: unset;
+  text-align: unset;
+  touch-action: manipulation;
+}
+
+textarea {
+  white-space: revert;
+  word-break: break-all;
+  resize: block;
+}
+@supports (field-sizing: content) {
+  textarea {
+    field-sizing: content;
+  }
+}
+
+:where(button, label[for], select, [role='tab'], [role='button']),
+::file-selector-button {
+  cursor: pointer;
+}
+
+/* =====================
+  テーブル
+===================== */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+th {
+  font-weight: inherit;
+  text-align: left;
+  vertical-align: middle;
+}
+td {
+  vertical-align: middle;
+  word-break: break-all;
+}
+
+address {
+  font-style: inherit;
+}
+
+div,
+span {
+  color: inherit;
+  font-weight: inherit;
+}
+
+iframe {
+  vertical-align: bottom;
+  border: none;
+}
+
+:where([hidden]) {
+  display: none;
+}
+
+:where([disable]) {
+  pointer-events: none;
+}
+
+html:has(dialog[open]) {
+  overflow: hidden;
+}
+:where(dialog:modal) {
+  all: revert;
+}
+
+:where([contenteditable]:not([contenteditable='false'])) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+  line-break: after-white-space;
+  -webkit-user-select: auto;
+  user-select: auto;
+}
+
+@supports (-webkit-user-drag: element) {
+  :where([draggable='true']) {
+    -webkit-user-drag: element;
+  }
+}
+@media print, screen and (min-width: 768px) {
+  a[href^='tel'],
+  a[href^='sms'] {
+    pointer-events: none;
+  }
+}
+
+a[href='javascript:void(0);'] {
+  pointer-events: none;
+}
