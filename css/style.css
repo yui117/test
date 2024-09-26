@@ -132,6 +132,7 @@ img {
   width: 100%;
   box-sizing: border-box;
   color: #ffffff;
+  z-index: 2;
 }
 .header-wrapper {
   display: flex;
@@ -188,6 +189,8 @@ img {
 
 /* ファーストビュー */
 .firstview {
+  position: relative;
+  z-index: 1;
   min-height: 800px;
   width: auto;
   background-image: url("../images/top-pc1.jpeg");
@@ -521,7 +524,6 @@ img {
 ---------------*/
 .SDGs-recruit {
   display: flex;
-  flex-direction: row;
   width: 100%;
   justify-content: center;
 }
@@ -869,9 +871,184 @@ body {
   margin-right: 1rem;
 }
 
+/* アニメーション
+-------------------*/
+.hover {
+  transition: 300ms;
+}
+.hover:hover {
+  opacity: 0.7;
+}
+
 /*スマホ版*/
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 599px) {
+  .img {
+    max-width: 599px;
+  }
   .header-nav {
     display: none;
+  }
+  .btn-gradietion-blue {
+    display: none;
+  }
+  .btn-gradietion-yellow {
+    display: none;
+  }
+
+  /*ファーストビュー*/
+  .firstview {
+    background-size: cover;
+  }
+  .firstview-text {
+    position: relative;
+    padding-top: 510px;
+    padding-left: 20px;
+  }
+  .firstview-text h1 {
+    font-size: 8vw;
+  }
+  .firstview-text p {
+    font-size: 4vw;
+    top: 15px;
+  }
+  .scroll {
+    font-size: 3vw;
+    left: 3%;
+    top: 80%;
+  }
+
+  /*メイン
+---------------*/
+
+  /*会社案内
+---------------*/
+  .about-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .about-img {
+    background-color: #e7dba6;
+    width: 85%;
+    height: 1000px;
+    top: 300px;
+  }
+  .about-img3 {
+    width: 70%;
+    top: -3%;
+    left: 40%;
+  }
+  .about-img2 {
+    width: 60%;
+    top: -10%;
+    left: 15%;
+  }
+  .about-img1 {
+    width: 50%;
+    top: 13%;
+    left: 5%;
+  }
+  .about-text {
+    width: 100%;
+    position: relative;
+    margin: 0 1rem 0 1rem;
+  }
+
+  .about-text h5 {
+    font-size: 4vw;
+  }
+  .about-text h2 {
+    font-size: 5vw;
+  }
+  .about-text p {
+    font-size: 4vw;
+  }
+
+  /*事業内容
+---------------*/
+  .business-title h2 {
+    font-size: 10vw;
+  }
+  .business-title h5 {
+    font-size: 2vw;
+    top: 5px;
+  }
+  .business-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .business-wrapper h3 {
+    font-size: 4vw;
+  }
+  .business-wrapper h5 {
+    font-size: 2vw;
+  }
+
+  /*.business-box1*/
+  .box1-text p {
+    width: 100%;
+  }
+
+  /*.business-box2*/
+  .business-box2 {
+    margin-top: 3rem;
+  }
+  .box2-text p {
+    width: 100%;
+  }
+
+  /*製品紹介
+---------------*/
+  .product-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 0;
+  }
+  .product-text {
+    margin-right: 0;
+  }
+  .product-text h2 {
+    font-size: 10vw;
+  }
+  .product-text h5 {
+    font-size: 2vw;
+    top: 0;
+    left: 3.5rem;
+  }
+
+  .product-text p {
+    top: 150%;
+    width: 100%;
+  }
+  .product-text .btn1 {
+    top: 180%;
+  }
+  .product-box {
+    margin: 0 0 0 0;
+  }
+
+  /*SDGs-採用情報
+---------------*/
+  .SDGs-recruit {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  /*SDGｓ
+---------------*/
+  /*採用情報
+---------------*/
+
+  .news {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .contact {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .end-wrapper {
+    display: flex;
+    flex-wrap: wrap;
   }
 }
