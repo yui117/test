@@ -501,7 +501,6 @@ img {
 }
 .product-img {
   display: flex;
-  justify-content: space-between;
   margin: 50px;
 }
 .product-img1 {
@@ -884,14 +883,19 @@ body {
 @media screen and (max-width: 599px) {
   .img {
     max-width: 599px;
+    width: 100%;
+  }
+  .site {
+    font-size: 4.3vw;
+    overflow: hidden;
   }
   .header-nav {
     display: none;
   }
-  .btn-gradietion-blue {
+  .header .btn-gradietion-blue {
     display: none;
   }
-  .btn-gradietion-yellow {
+  .header .btn-gradietion-yellow {
     display: none;
   }
 
@@ -922,6 +926,9 @@ body {
 
   /*会社案内
 ---------------*/
+  .about {
+    min-height: 1100px;
+  }
   .about-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -930,12 +937,12 @@ body {
   .about-img {
     background-color: #e7dba6;
     width: 85%;
-    height: 1000px;
+    height: 700px;
     top: 300px;
   }
   .about-img3 {
     width: 70%;
-    top: -3%;
+    top: 0%;
     left: 40%;
   }
   .about-img2 {
@@ -945,12 +952,13 @@ body {
   }
   .about-img1 {
     width: 50%;
-    top: 13%;
+    top: 20%;
     left: 5%;
   }
   .about-text {
-    width: 100%;
-    position: relative;
+    width: 95%;
+    position: absolute;
+    top: 100px;
     margin: 0 1rem 0 1rem;
   }
 
@@ -959,49 +967,91 @@ body {
   }
   .about-text h2 {
     font-size: 5vw;
+    top: 20px;
   }
   .about-text p {
+    width: 80%;
     font-size: 4vw;
+    top: 430px;
+  }
+  .about-text .btn1 {
+    position: relative;
+    top: 470px;
+  }
+  .about-flow {
+    font-size: 2rem;
+    top: 360px;
   }
 
   /*事業内容
 ---------------*/
+
+  .business-title {
+    margin: 15% 0 0 0;
+  }
   .business-title h2 {
-    font-size: 10vw;
+    font-size: 12vw;
   }
   .business-title h5 {
-    font-size: 2vw;
-    top: 5px;
+    font-size: 4vw;
+    top: 15px;
   }
   .business-wrapper {
     display: flex;
     flex-wrap: wrap;
+    padding: 15% 0 15% 0;
   }
   .business-wrapper h3 {
-    font-size: 4vw;
+    font-size: 7vw;
+    margin-top: 3%;
   }
   .business-wrapper h5 {
-    font-size: 2vw;
+    font-size: 3.3vw;
   }
 
   /*.business-box1*/
+  .business-box1 {
+    width: 100%;
+    height: 100%;
+  }
   .box1-text p {
     width: 100%;
+  }
+  .business-img1 {
+    width: 90%;
+    height: 90%;
+    margin: 10% 0 10% 0;
   }
 
   /*.business-box2*/
   .business-box2 {
-    margin-top: 3rem;
+    width: 100%;
+    height: 100%;
+    margin-top: 10%;
   }
   .box2-text p {
     width: 100%;
   }
+  .business-img2 {
+    width: 90%;
+    height: 90%;
+    margin: 10% 0 10% 0;
+  }
+
+  .business .btn1 {
+    margin-bottom: 15%;
+  }
 
   /*製品紹介
 ---------------*/
+  .product-flow {
+    font-size: 2rem;
+    top: 20px;
+  }
   .product-wrapper {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 20%;
     margin-left: 0;
   }
   .product-text {
@@ -1011,20 +1061,47 @@ body {
     font-size: 10vw;
   }
   .product-text h5 {
-    font-size: 2vw;
-    top: 0;
-    left: 3.5rem;
+    font-size: 4vw;
+    top: 5%;
+    left: 4rem;
   }
 
   .product-text p {
-    top: 150%;
-    width: 100%;
+    top: 160%;
+    width: 90%;
+    left: 5%;
   }
   .product-text .btn1 {
     top: 180%;
+    left: 5%;
   }
   .product-box {
     margin: 0 0 0 0;
+    height: 80%;
+    width: 100%;
+    height: 240px;
+    overflow-x: scroll;
+    flex-shrink: 0;
+    position: relative;
+    margin-top: -100px;
+  }
+  .product-img {
+    margin: 0;
+  }
+  .product-img1 {
+    height: 100%;
+    width: 100%;
+    margin: 20px 2px 20px 2px;
+  }
+  .product-img2 {
+    height: 100%;
+    width: 100%;
+    margin: 20px 2px 20px 2px;
+  }
+  .product-img3 {
+    height: 100%;
+    width: 100%;
+    margin: 20px 2px 20px 2px;
   }
 
   /*SDGs-採用情報
@@ -1035,20 +1112,144 @@ body {
   }
   /*SDGｓ
 ---------------*/
+  .SDGs {
+    width: 100%;
+    height: 11rem;
+  }
+  .SDGs-text {
+    top: 18%;
+    left: 10%;
+    width: 100%;
+  }
+  .SDGs-text h2 {
+    font-size: 10vw;
+  }
+  .SDGs-text h5 {
+    font-size: 4vw;
+    top: 10px;
+  }
+  .SDGs .btn2 {
+    top: 20px;
+  }
+
   /*採用情報
 ---------------*/
+  .recruit {
+    width: 100%;
+    height: 11rem;
+  }
+  .recruit-text {
+    top: 18%;
+    left: 10%;
+    width: 100%;
+  }
+  .recruit-text h2 {
+    font-size: 10vw;
+  }
+  .recruit-text h5 {
+    font-size: 4vw;
+    top: 10;
+  }
+  .recruit .btn2 {
+    top: 20px;
+  }
 
+  /*お知らせ
+---------------*/
   .news {
     display: flex;
     flex-wrap: wrap;
+    padding: 0;
+    margin: 20% 5% 50% 5%;
+  }
+  .news-title {
+    width: 100%;
+  }
+  .news-title h2 {
+    color: #d2b127;
+    font-size: 10vw;
+  }
+  .news-title h5 {
+    font-size: 2.3vw;
+    position: relative;
+    top: 5px;
+  }
+  .news-title .btn1 {
+    position: relative;
+    top: 520px;
+  }
+  /*news-list*/
+  .news-list {
+    width: 100%;
+  }
+  .news-list .item .date {
+    min-width: 0;
+    font-size: 2.6vw;
+    padding: 0 5px 0 0;
+  }
+  .news-list .item .category span {
+    font-size: 2vw;
   }
 
+  /*フッター
+---------------*/
+  /*お問い合わせ*/
   .contact {
+    min-height: 500px;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
+    text-align: center;
+    padding-top: 10%;
+  }
+  .contact-text {
+    margin: 10% 5% 10% 5%;
+  }
+  .contact-text h2 {
+    font-size: 10vw;
+  }
+  .contact-text h5 {
+    font-size: 4vw;
+    top: 5px;
+  }
+  .contact-text p {
+    top: 20px;
+    width: 100%;
+  }
+  .btn-area {
+    flex-direction: column;
+  }
+
+  /*末尾*/
+  .end {
   }
   .end-wrapper {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column-reverse;
+    margin-top: 10px;
+  }
+  .end-corp {
+    text-align: center;
+    margin: 65px 0 50px 0;
+  }
+  .end-corp h3 {
+    font-size: 5vw;
+    margin-top: 15px;
+  }
+  .end-corp p {
+    font-size: 3.6vw;
+  }
+  .end-nav {
+    margin: 10% 0 10% 15%;
+  }
+  .content {
+    padding: 0 20px 0 20px;
+    line-height: 2rem;
+  }
+  .copyright {
+    font-size: 2vw;
+    text-align: center;
+    padding: 0 0 30px 0;
   }
 }
